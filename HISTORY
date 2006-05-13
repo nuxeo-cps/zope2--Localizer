@@ -1,0 +1,99 @@
+*******************************************
+** Localizer V1.2.0 [R1 build 2006/03/03-17:52 by ben]
+** SVN URL: https://svn.nuxeo.org/pub/Localizer/trunk Revision: 33914
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- update po
+
+*******************************************
+** Localizer V1.1.1 [R1 build 2006/02/17-20:33 by fermigier]
+** SVN URL: https://svn.nuxeo.org/pub/Localizer/trunk Revision: 32986
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Use FasterStringIO instead of StringIO in PageTemplate monkey-patch.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** Localizer V1.1.0 [R1 build 2006/01/23-17:37 by fermigier]
+** SVN URL: https://svn.nuxeo.org/pub/Localizer/trunk Revision: 31976
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Added German translation.
+
+*******************************************
+** Localizer V1.0.4 [R1 build 2005/09/21-15:35 by fguillaume]
+** SVN URL: https://svn.nuxeo.org/pub/Localizer/trunk Revision: 27306
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- If there is no request, the language negotiator now fails gracefully.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** Localizer V1.0.3 [R1 build 2005/08/05-15:44 by fguillaume]
+** SVN URL: https://svn.nuxeo.org/pub/Localizer/trunk Revision: 25577
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Fix for Zope 2.8
+- Remove useless error message on ConflictError.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
+*******************************************
+** Localizer V1.0.2 [R1 build 2005/06/02-09:37 by fguillaume]
+** SVN URL: https://svn.nuxeo.org/pub/Localizer/trunk Revision: 22058
+Requires:
+~~~~~~~~~
+- Zope 2.5 is now unsupported.
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+-
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+- Fixed to work when used with some unit tests that don't have a proper
+  request (CMFCore.tests.test_FSPageTemplate.FSPageTemplateTests).
+
+use nuxeo packaging
