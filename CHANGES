@@ -9,4 +9,5 @@ Bug fixes:
 - Added Brazilian Portugese translation (thanks to mo.menezes@gmail.com).
 New internal features:
 ~~~~~~~~~~~~~~~~~~~~~~
--
+- Moved from the xx-YY naming of languages to the xx_YY both CPS and gettext
+  use.
