@@ -21,10 +21,8 @@
 __version__ = "$Revision$"
 
 
-from zLOG import LOG, ERROR, INFO, PROBLEM, DEBUG
-
-
-
+import logging
+logger = logging.getLogger('Localizer')
 
 #################################################################
 # Patches start here!!!
@@ -138,7 +136,13 @@ if patch:
 
 # Fix uses of StringIO with a Unicode-aware StringIO
 
-from TAL.TALInterpreter import FasterStringIO
+try:
+    from zope.tal.talinterpreter import TALInterpreter
+    from zope.tal.talinterpreter import FasterStringIO
+except ImportError:
+    # BBB: Zope < 2.10
+    from TAL.TALInterpreter import TALInterpreter
+    from TAL.TALInterpreter import FasterStringIO
 class LocalizerStringIO(FasterStringIO):
     def write(self, s):
         if isinstance(s, unicode):
@@ -151,14 +155,13 @@ class LocalizerStringIO(FasterStringIO):
         FasterStringIO.write(self, s)
 
 from Products.PageTemplates.PageTemplate import PageTemplate
-from TAL.TALInterpreter import TALInterpreter
 import os
 
 if os.environ.get('LOCALIZER_USE_ZOPE_UNICODE'):
-    LOG('Localizer', DEBUG, 'No Unicode patching')
+    logger.debug("No Unicode patching")
     # Use the standard Zope way of dealing with Unicode
 else:
-    LOG('Localizer', DEBUG, 'Unicode patching')
+    logger.debug("Unicode patching")
     # Patch the StringIO method of TALInterpreter and PageTemplate
     def patchedStringIO(self):
         return LocalizerStringIO()
