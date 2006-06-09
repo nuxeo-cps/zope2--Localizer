@@ -136,13 +136,8 @@ if patch:
 
 # Fix uses of StringIO with a Unicode-aware StringIO
 
-try:
-    from zope.tal.talinterpreter import TALInterpreter
-    from zope.tal.talinterpreter import FasterStringIO
-except ImportError:
-    # BBB: Zope < 2.10
-    from TAL.TALInterpreter import TALInterpreter
-    from TAL.TALInterpreter import FasterStringIO
+from TAL.TALInterpreter import TALInterpreter
+from TAL.TALInterpreter import FasterStringIO
 class LocalizerStringIO(FasterStringIO):
     def write(self, s):
         if isinstance(s, unicode):
