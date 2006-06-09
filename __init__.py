@@ -136,6 +136,8 @@ if patch:
 
 # Fix uses of StringIO with a Unicode-aware StringIO
 
+import warnings
+warnings.filterwarnings('ignore', "TAL.TALInterpreter has moved")
 from TAL.TALInterpreter import TALInterpreter
 from TAL.TALInterpreter import FasterStringIO
 class LocalizerStringIO(FasterStringIO):
