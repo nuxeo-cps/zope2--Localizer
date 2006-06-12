@@ -154,9 +154,16 @@ class LocalizerStringIO(FasterStringIO):
 from Products.PageTemplates.PageTemplate import PageTemplate
 import os
 
-if os.environ.get('LOCALIZER_USE_ZOPE_UNICODE'):
-    logger.debug("No Unicode patching")
+# check if we're Zope >= 2.10, then don't patch for unicode
+try:
+    import zope.contenttype
+except ImportError:
+    _zope210 = False
+else:
+    _zope210 = True
+if _zope210 or os.environ.get('LOCALIZER_USE_ZOPE_UNICODE'):
     # Use the standard Zope way of dealing with Unicode
+    pass
 else:
     logger.debug("Unicode patching")
     # Patch the StringIO method of TALInterpreter and PageTemplate
