@@ -1,3 +1,23 @@
+===========================================================
+Package: Localizer 1.2.3
+===========================================================
+First release built by: ogrisel at: 2006-10-10T11:45:44
+SVN Tag: https://svn.nuxeo.org/pub/Zope2/Localizer/tags/1.2.3
+Build from: https://svn.nuxeo.org/pub/Zope2/Localizer/trunk@49442
+
+Requires:
+~~~~~~~~~
+-
+New features:
+~~~~~~~~~~~~~
+-
+Bug fixes:
+~~~~~~~~~~
+- Updated Spanish translation thanks to Jesús Martín.
+New internal features:
+~~~~~~~~~~~~~~~~~~~~~~
+-
+
 *******************************************
 ** Localizer V1.2.2 [R1 build 2006/07/31-11:05 by fermigier]
 ** SVN URL: https://svn.nuxeo.org/pub/Zope2/Localizer/trunk Revision: 47588
