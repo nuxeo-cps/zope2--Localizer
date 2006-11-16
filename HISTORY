@@ -1,4 +1,24 @@
 ===========================================================
+Package: Localizer 1.2.4
+===========================================================
+First release built by: gracinet at: 2006-11-16T18:20:36
+SVN Tag: https://svn.nuxeo.org/pub/Zope2/Localizer/tags/1.2.4
+Build from: https://svn.nuxeo.org/pub/Zope2/Localizer/trunk@50008
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- [packaging] bundleman svn property
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: Localizer 1.2.3
 ===========================================================
 First release built by: ogrisel at: 2006-10-10T11:45:44
