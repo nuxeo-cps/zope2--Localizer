@@ -1,0 +1,268 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Localizer\n"
+"POT-Creation-Date: 2005-06-23 17:24default\n"
+"PO-Revision-Date: 2007-05-13 10:32+0100\n"
+"Last-Translator: xosé francisco martínez reboiras <xosereboiras@lasalle.es>\n"
+"Language-Team: español <jesusmartin@lasalle.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
+"Preferred-encodings: latin9 utf-8\n"
+"Domain: default\n"
+"X-Generator: KBabel 1.9\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+
+msgid "Change"
+msgstr "Cambiar"
+
+msgid "Add"
+msgstr "Engadir"
+
+msgid "Default"
+msgstr "Por defecto"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "To add a language select it and click the <tt>Add</tt> button."
+msgstr "Para engadir un idioma selecciónao e pulsa o botón <tt>Añadir</tt>."
+
+msgid "To delete a language check it and click the <tt>Delete</tt> button. To change the default language select it and click the <tt>Change</tt> button."
+msgstr "Para eliminar un idioma selecciónao e pulsa o botón <tt>Eliminar</tt>. Para cambiar o idioma por defecto selecciónao e pulsa o botón <tt>Cambiar</tt>."
+
+msgid "There aren't languages"
+msgstr "Non hai idiomas."
+
+msgid "Add Local Content"
+msgstr "Engadir contido localizado"
+
+msgid "Id"
+msgstr "Id"
+
+#: LanguageManager.py:41
+msgid "Languages"
+msgstr "Idiomas"
+
+msgid "A Local Content object provides an storage for multilingual (and non multilingual) properties. It also helps to keep your content separated from the logic and the presentation."
+msgstr "Un obxecto local proporciona un medio para almacenar propiedades multilingües (e monolingües). Tamén axuda a manter o contido separado da lóxica e a presentación."
+
+msgid "Add Local Folder"
+msgstr "Engadir carpeta local"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "A local folder is a generic solution to manage any kind of multingual objects, files, images, scripts, etc.."
+msgstr "Unha carpeta local é unha solución xenérica para xestionar calquera tipo de obxectos multilingües, ficheiros, imaxes, guións de código, etc.."
+
+msgid "To delete an attribute check it and click the <tt>Delete</tt> button."
+msgstr "Para eliminar un atributo selecciónao e pulsa o botón <tt>Eliminar</tt>."
+
+msgid "There aren't attributes"
+msgstr "Non hai atributos."
+
+msgid "To add an attribute introduce its id and click the <tt>Add</tt> button."
+msgstr "Para engadir un atributo introduce o seu id e pulsa o botón <tt>Engadir</tt>."
+
+msgid "Add Localizer"
+msgstr "Engadir <em>Localizer</em>"
+
+msgid "A Localizer object provides <em>locale folders</em>, each one associated with a language. It transparently adds a locale folder to the path so objects for that language will be used. It's useful to localize special objects like images, or specific logic (to format dates for example)."
+msgstr "Un obxecto <em>Localizer</em> proporciona <em>carpetas locais</em>, cada unha asociada a un idioma. De forma transparente engade unha carpeta local á ruta, deste modo usaranse os obxectos da linguaxe asociada. É útil para localizar obxectos especiais como imaxes, ou lóxica específica (para dar formato ás datas por exemplo)."
+
+msgid "Use locale folders"
+msgstr "Usar carpetas locais"
+
+msgid "Locale folders are useful to store special multilingual objects like images and specific logic. If used the <tt>Localizer</tt> object will transparently add the right locale folder to the url. If you want to use locale folders check the checkbox, otherwise uncheck it, then click the <tt>Change</tt> button."
+msgstr "As carpetas locais son útiles para almacenar obxectos multilingües especiais como imaxes e lóxica específica. Se se usan o obxecto <tt>Localizer</tt> de forma transparente engadirá a carpeta local correcta á <em>url</em>. Se queres usar as carpetas locais selecciona o cadro de selección, se non deselecciónao, entón pulsa en botón <tt>Cambiar</tt>."
+
+#: LocalPropertyManager.py:82
+msgid "Upgrade"
+msgstr "Actualizar"
+
+msgid "This <tt>Localizer</tt> object needs to be upgraded."
+msgstr "Este obxecto <tt>Localizer</tt> debe ser actualizado"
+
+msgid "This <tt>Localizer</tt> object don't needs to be upgraded."
+msgstr "Este obxecto <tt>Localizer</tt> non necesita actualizarse"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Hide this language"
+msgstr "Ocultar este idioma"
+
+msgid "Show this language"
+msgstr "Mostrar este idioma"
+
+msgid "Save changes"
+msgstr "Gardar cambios"
+
+msgid "To add a new property enter its name, select its type and click the <tt>Add</tt> button."
+msgstr "Para engadir unha nova propiedade introduce o seu nome, selecciona o seu tipo e pulsa o botón <tt>Engadir</tt>."
+
+msgid "There aren't properties."
+msgstr "Non hai propiedades."
+
+msgid "This <tt>%s</tt> object needs to be upgraded"
+msgstr "Este obxecto <tt>%s</tt> necesita ser actualizado"
+
+msgid "This object don't needs to be upgraded."
+msgstr "Este obxecto non necesita ser actualizado."
+
+msgid "Add Message Catalog"
+msgstr "Engadir un catálogo de mensaxes"
+
+msgid "A message catalog stores messages and its translations to different languages. It provides the <tt>gettext</tt> method to get the right translation for a given message. Message catalogs are useful to translate the application interfaces (labels, buttons, etc..)."
+msgstr "Un catálogo de mensaxes almacena mensaxes e as súas traducións a diferentes idiomas. Proporciona o método <tt>gettext</tt> para obter a tradución correcta nun idioma dado. Os catálogos de mensaxes son útiles para traducir as interfaces da aplicación (etiquetas, botóns, etc..)."
+
+msgid "File / Language"
+msgstr "Ficheiro / Idioma"
+
+msgid "Export"
+msgstr "Exportar"
+
+msgid "File"
+msgstr "Ficheiro"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Import"
+msgstr "Importar"
+
+msgid "You can export the messages and their translations to PO files. Check <tt>locale.pot</tt> to get only the messages, without their translations. Check any other option to get a PO file with the messages and their translations to the selected language. Then click the <tt>Export</tt> button."
+msgstr "Podes exportar as mensaxes e as súas traducións a ficheiros PO. Selecciona <tt>locale.pot</tt> para obter tan só as mensaxes, sen as súas traducións. Selecciona calquera outra opción para obter un ficheiro PO coas mensaxes e as súas traducións ao idioma seleccionado. Entón pulsa o botón <tt>Exportar</tt>."
+
+msgid "You can add new messages and translations importing a PO file. Enter the filename, select the language of the translations and click the <tt>Import</tt> button."
+msgstr "Poes engadir novas mensaxes e traducións importando ficheiros PO. Introduce o nome do ficheiro, selecciona o idioma das traducións e pulsa o botón <tt>Importar</tt>."
+
+msgid "Save"
+msgstr "Gardar"
+
+msgid "Only untranslated messages"
+msgstr "Soamente mensaxes sen tradución"
+
+msgid "Filter"
+msgstr "Filtrar"
+
+msgid "Results %d-%d of %d"
+msgstr "Resultados %d-%d de %d"
+
+msgid "There aren't messages."
+msgstr "Non hai mensaxes."
+
+msgid "Your name"
+msgstr "O teu nome"
+
+msgid "Your e-mail address"
+msgstr "A túa dirección de <em>email</em>"
+
+msgid "Team e-mail address"
+msgstr "Dirección de <em>email</em> do equipo"
+
+msgid "Charset"
+msgstr "Conxunto de caracteres"
+
+msgid "With this form you can change the title of the message catalog. The title also is used as the value of the <tt>Project-Id-Version</tt> field in the header of the PO files, which are generated when the message catalog is exported."
+msgstr "Con este formulario podes cambiar o título do catálogo de mensaxes. O título tamén se utiliza como valor do campo <tt>Project-Id-Version</tt> na cabeceira dos ficheiros PO, que se xeran cando se exporta o catálogo de mensaxes."
+
+msgid "Besides the title the header of a PO file stores more information, the name and the email address of the last translator, the email adress of the translation team and the charset. The forms below let to modify this information for each language."
+msgstr "Ademais do título as cabeceiras dos ficheros PO almacenan máis información, o nome e a dirección de correo electrónico do último tradutor, a dirección de correo electrónico do equipo de tradución e o conxunto de caracteres. Os formularios que hai abaixo permiten modificar esta información para cada idioma."
+
+#: LocalContent.py:76
+#: LocalFolder.py:85
+#: Localizer.py:98
+#: MessageCatalog.py:200
+msgid "label"
+msgstr ""
+
+#: LocalFolder.py:77
+msgid "Attributes"
+msgstr "Atributos"
+
+#: LocalPropertyManager.py:88
+msgid "Local properties"
+msgstr "Propiedades locais"
+
+#: LocalPropertyManager.py:215
+#: LocalPropertyManager.py:231
+#: LocalPropertyManager.py:252
+#: MessageCatalog.py:328
+#: MessageCatalog.py:342
+msgid "Saved changes."
+msgstr "Cambios gardados."
+
+#: MessageCatalog.py:189
+msgid "Messages"
+msgstr "Mensaxes"
+
+#: MessageCatalog.py:191
+#: Utils.py:72
+msgid "Properties"
+msgstr "Propiedades"
+
+#: MessageCatalog.py:192
+msgid "Import/Export"
+msgstr "Importar/Exportar"
+
+#: Utils.py:70
+msgid "Contents"
+msgstr "Contido"
+
+#: Utils.py:71
+msgid "View"
+msgstr "Ver"
+
+#: Utils.py:73
+msgid "Security"
+msgstr "Seguridade"
+
+#: Utils.py:74
+msgid "Undo"
+msgstr "Desfacer"
+
+#: Utils.py:75
+msgid "Ownership"
+msgstr "Propiedade"
+
+#: Utils.py:76
+msgid "Find"
+msgstr "Buscar"
+
+#: Utils.py:77
+msgid "Catalan"
+msgstr "Catalán"
+
+#: Utils.py:78
+msgid "German"
+msgstr "Alemán"
+
+#: Utils.py:79
+msgid "Spanish"
+msgstr "Español"
+
+#: Utils.py:80
+msgid "Basque"
+msgstr "Éuscaro"
+
+#: Utils.py:81
+msgid "French"
+msgstr "Francés"
+
+#: Utils.py:82
+msgid "Portuguese"
+msgstr "Portugués"
+
+#: Utils.py:83
+msgid "Galician"
+msgstr "Galego"
+
