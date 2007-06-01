@@ -2,12 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.2.1\n"
 "POT-Creation-Date: 2002-09-10 14:09+CET\n"
-"PO-Revision-Date: 2001-06-03 18:06+CET\n"
-"Last-Translator: jdavid\n"
-"Language-Team: ??\n"
+"PO-Revision-Date: 2007-05-31 13:12+0100\n"
+"Language-Team: valencià/català. <juangus@lasalle.es>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Preferred-encodings: latin9 utf-8\n"
+"Domain: default\n"
+"Language-Code: ca\n"
+"Language-Name: valencià/català\n"
+"X-Poedit-Language: Catalan\n"
+"X-Poedit-Country: SPAIN\n"
 
 msgid "Change"
 msgstr ""
@@ -25,9 +31,7 @@ msgstr "Esborrar"
 msgid "To add a language select it and click the <tt>Add</tt> button."
 msgstr ""
 
-msgid ""
-"To delete a language check it and click the <tt>Delete</tt> button. To "
-"change the default language select it and click the <tt>Change</tt> button."
+msgid "To delete a language check it and click the <tt>Delete</tt> button. To change the default language select it and click the <tt>Change</tt> button."
 msgstr ""
 
 #, fuzzy
@@ -46,10 +50,7 @@ msgstr "Id"
 msgid "Languages"
 msgstr "Nou llenguatge"
 
-msgid ""
-"A Local Content object provides an storage for multilingual (and non "
-"multilingual) properties. It also helps to keep your content separated from "
-"the logic and the presentation."
+msgid "A Local Content object provides an storage for multilingual (and non multilingual) properties. It also helps to keep your content separated from the logic and the presentation."
 msgstr ""
 
 #, fuzzy
@@ -59,9 +60,7 @@ msgstr "Nou Localizer"
 msgid "Title"
 msgstr "Títol"
 
-msgid ""
-"A local folder is a generic solution to manage any kind of multingual "
-"objects, files, images, scripts, etc.."
+msgid "A local folder is a generic solution to manage any kind of multingual objects, files, images, scripts, etc.."
 msgstr ""
 
 msgid "To delete an attribute check it and click the <tt>Delete</tt> button."
@@ -78,22 +77,13 @@ msgstr ""
 msgid "Add Localizer"
 msgstr "Nou Localizer"
 
-msgid ""
-"A Localizer object provides <em>locale folders</em>, each one associated "
-"with a language. It transparently adds a locale folder to the path so "
-"objects for that language will be used. It's useful to localize special "
-"objects like images, or specific logic (to format dates for example)."
+msgid "A Localizer object provides <em>locale folders</em>, each one associated with a language. It transparently adds a locale folder to the path so objects for that language will be used. It's useful to localize special objects like images, or specific logic (to format dates for example)."
 msgstr ""
 
 msgid "Use locale folders"
 msgstr ""
 
-msgid ""
-"Locale folders are useful to store special multilingual objects like images "
-"and specific logic. If used the <tt>Localizer</tt> object will transparently "
-"add the right locale folder to the url. If you want to use locale folders "
-"check the checkbox, otherwise uncheck it, then click the <tt>Change</tt> "
-"button."
+msgid "Locale folders are useful to store special multilingual objects like images and specific logic. If used the <tt>Localizer</tt> object will transparently add the right locale folder to the url. If you want to use locale folders check the checkbox, otherwise uncheck it, then click the <tt>Change</tt> button."
 msgstr ""
 
 #: LocalPropertyManager.py:82
@@ -123,9 +113,7 @@ msgstr "Idiomes pendents"
 msgid "Save changes"
 msgstr "Guardar canvis"
 
-msgid ""
-"To add a new property enter its name, select its type and click the <tt>Add</"
-"tt> button."
+msgid "To add a new property enter its name, select its type and click the <tt>Add</tt> button."
 msgstr ""
 
 msgid "There aren't properties."
@@ -140,11 +128,7 @@ msgstr ""
 msgid "Add Message Catalog"
 msgstr ""
 
-msgid ""
-"A message catalog stores messages and its translations to different "
-"languages. It provides the <tt>gettext</tt> method to get the right "
-"translation for a given message. Message catalogs are useful to translate "
-"the application interfaces (labels, buttons, etc..)."
+msgid "A message catalog stores messages and its translations to different languages. It provides the <tt>gettext</tt> method to get the right translation for a given message. Message catalogs are useful to translate the application interfaces (labels, buttons, etc..)."
 msgstr ""
 
 #, fuzzy
@@ -165,17 +149,10 @@ msgstr "Nou llenguatge"
 msgid "Import"
 msgstr ""
 
-msgid ""
-"You can export the messages and their translations to PO files. Check "
-"<tt>locale.pot</tt> to get only the messages, without their translations. "
-"Check any other option to get a PO file with the messages and their "
-"translations to the selected language. Then click the <tt>Export</tt> button."
+msgid "You can export the messages and their translations to PO files. Check <tt>locale.pot</tt> to get only the messages, without their translations. Check any other option to get a PO file with the messages and their translations to the selected language. Then click the <tt>Export</tt> button."
 msgstr ""
 
-msgid ""
-"You can add new messages and translations importing a PO file. Enter the "
-"filename, select the language of the translations and click the <tt>Import</"
-"tt> button."
+msgid "You can add new messages and translations importing a PO file. Enter the filename, select the language of the translations and click the <tt>Import</tt> button."
 msgstr ""
 
 msgid "Save"
@@ -206,21 +183,16 @@ msgstr ""
 msgid "Charset"
 msgstr ""
 
-msgid ""
-"With this form you can change the title of the message catalog. The title "
-"also is used as the value of the <tt>Project-Id-Version</tt> field in the "
-"header of the PO files, which are generated when the message catalog is "
-"exported."
+msgid "With this form you can change the title of the message catalog. The title also is used as the value of the <tt>Project-Id-Version</tt> field in the header of the PO files, which are generated when the message catalog is exported."
 msgstr ""
 
-msgid ""
-"Besides the title the header of a PO file stores more information, the name "
-"and the email address of the last translator, the email adress of the "
-"translation team and the charset. The forms below let to modify this "
-"information for each language."
+msgid "Besides the title the header of a PO file stores more information, the name and the email address of the last translator, the email adress of the translation team and the charset. The forms below let to modify this information for each language."
 msgstr ""
 
-#: LocalContent.py:76 LocalFolder.py:85 Localizer.py:98 MessageCatalog.py:200
+#: LocalContent.py:76
+#: LocalFolder.py:85
+#: Localizer.py:98
+#: MessageCatalog.py:200
 msgid "label"
 msgstr ""
 
@@ -233,8 +205,11 @@ msgstr ""
 msgid "Local properties"
 msgstr "Propietats"
 
-#: LocalPropertyManager.py:215 LocalPropertyManager.py:231
-#: LocalPropertyManager.py:252 MessageCatalog.py:328 MessageCatalog.py:342
+#: LocalPropertyManager.py:215
+#: LocalPropertyManager.py:231
+#: LocalPropertyManager.py:252
+#: MessageCatalog.py:328
+#: MessageCatalog.py:342
 #, fuzzy
 msgid "Saved changes."
 msgstr "Guardar canvis"
@@ -243,7 +218,8 @@ msgstr "Guardar canvis"
 msgid "Messages"
 msgstr ""
 
-#: MessageCatalog.py:191 Utils.py:72
+#: MessageCatalog.py:191
+#: Utils.py:72
 msgid "Properties"
 msgstr "Propietats"
 
@@ -257,11 +233,11 @@ msgstr "Contingut"
 
 #: Utils.py:71
 msgid "View"
-msgstr "Veure"
+msgstr "Vore"
 
 #: Utils.py:73
 msgid "Security"
-msgstr "Seguritat"
+msgstr "Seguretat"
 
 #: Utils.py:74
 msgid "Undo"
@@ -277,7 +253,7 @@ msgstr "Cercar"
 
 #: Utils.py:77
 msgid "Catalan"
-msgstr "Català"
+msgstr "Valencià/Català"
 
 #: Utils.py:78
 msgid "German"
@@ -305,58 +281,42 @@ msgstr ""
 
 #~ msgid "Next"
 #~ msgstr "Següent"
-
 #~ msgid "Previous"
 #~ msgstr "Anterior"
-
 #~ msgid "All"
 #~ msgstr "Tots"
-
 #~ msgid "Available translations"
 #~ msgstr "Traduccions disponibles"
-
 #~ msgid "Batch size"
 #~ msgstr "Grandària del lot"
-
 #~ msgid "Default language"
 #~ msgstr "Idioma per defecte"
-
 #~ msgid "Full"
 #~ msgstr "Total"
-
 #~ msgid "Localized Content"
 #~ msgstr "Contingut localitzat"
-
 #~ msgid "Localized Strings"
 #~ msgstr "Cadenes localitzades"
 
 #, fuzzy
 #~ msgid "New Local Content"
 #~ msgstr "Contingut localitzat"
-
 #~ msgid "New Localizer"
 #~ msgstr "Nou Localizer"
-
 #~ msgid "Only valid"
 #~ msgstr "Sols els vàlids"
-
 #~ msgid "Partial"
 #~ msgstr "Parcial"
-
 #~ msgid "Pending languages"
 #~ msgstr "Idiomes pendents"
-
 #~ msgid "Regular expression"
 #~ msgstr "Expressió regular"
-
 #~ msgid "Results"
 #~ msgstr "Resultats"
-
 #~ msgid "Status"
 #~ msgstr "Estat"
-
 #~ msgid "Text"
 #~ msgstr "Texte"
-
 #~ msgid "of"
 #~ msgstr "de"
+
