@@ -1,37 +1,38 @@
 # -*- coding: iso-8859-15 -*-
-
 # Localizer, Zope product that provides internationalization services
 # Copyright (C) 2001-2002 J. David Ibáñez <j-david@noos.fr>
-
+# Authors:
+# J. David Ibáñez <j-david@noos.fr>
+# M.-A. Darche <madarche@nuxeo.com>
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
 # of the License, or (at your option) any later version.
-
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-
+#
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-
+#
+# $Id$
 """
 This module implements the Accept-Charset and Accept-Language request
 headers of the HTTP protocol.
 
-There're six classes: Node, Root, CharsetNode, LanguageNode, AcceptCharset
-and AcceptLanguage.
+This module follows the references:
+RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1
+RFC 3282 - Content Language Headers
 
-The public interface is provided by the two last classes, AcceptCharset and
-AcceptLanguage. The other four shouldn't be used directly.
+The public interface is provided by the classes AcceptCharset and
+AcceptLanguage. The other classes shouldn't be used directly.
 """
 
-
-##from UserDict import UserDict
-from types import StringType
-
+DEFAULT_CHARSET = 'ISO-8859-1'
 
 class Node:
     """
@@ -68,8 +69,6 @@ class Node:
         return self.quality
 
 
-
-
 class Root(Node):
     """
     Base class that represents the root of a tree.
@@ -83,36 +82,45 @@ class Root(Node):
         Node.__init__(self)
 
         self.quality = 0.0
+        # It is needed to keep the order of the passed keys as recommended
+        # by RFC3282 :
+        # If no Q values are given, the language-ranges are given in priority
+        # order, with the leftmost language-range being the most preferred
+        # language; this is an extension to the HTTP/1.1 rules, but matches
+        # current practice.
+        self._ordered_keys = []
+        self._parse(accept)
 
-        # Parse the accept string and initialize the tree.
-        accept = self.parse(accept)
-        for key, quality in accept.items():
-            self[key] = quality
-
-
-    def parse(self, accept):
+    def _parse(self, accept):
         """
         From a string formatted as specified in the RFC2616, it builds a data
         structure which provides a high level interface to implement language
         negotiation.
         """
-        aux = {}
+        # Parse the accept string and initialize the tree.
+        # parsed_accept is of the following form:
+        # [(id1, id1-quality), (id2, id2-quality), etc.]
+        accept_parsed = []
         for x in accept.split(','):
             x = x.strip()
             x = x.split(';')
 
-            # Get the quality
             if len(x) == 2:
+                # There is a quality value
                 quality = x[1]            # Get the quality
                 quality = quality.strip()
-                quality = quality[2:]     # Get the number (remove "q=")
+                quality = quality[2:]     # Get the quality number (remove "q=")
                 quality = float(quality)  # Change it to float
             else:
+                # There isn't any quality value,
+                # so the quality value defaults to "q=1" as specified by RFC2616
                 quality = 1.0
 
-            aux[x[0]] = quality
+            accept_parsed.append((x[0], quality))
 
-        return aux
+        for (key, quality) in accept_parsed:
+            self._ordered_keys.append(key)
+            self[key] = quality
 
     def __str__(self):
         d = {}
@@ -121,8 +129,10 @@ class Root(Node):
 
         return "%s %s" % (self.quality, d)
 
-
     # Public interface
+    def getOrderedKeys(self):
+        return self._ordered_keys
+
     def get_quality(self, key):
         """
         Returns the quality of the given node
@@ -134,7 +144,6 @@ class Root(Node):
 
         return node.get_quality()
 
-
     def set(self, key, quality):
         """
         Sets the quality for a language, only if the current quality is
@@ -143,7 +152,6 @@ class Root(Node):
         node = self._getnode(key)
         if quality > node.quality:
             node.quality = quality
-
 
 
 class CharsetNode(Node):
@@ -158,7 +166,6 @@ class CharsetNode(Node):
         return self.children[key]
 
 
-
 class LanguageNode(Node):
     """
     Implements a node of a Accept-Language tree.
@@ -168,7 +175,7 @@ class LanguageNode(Node):
         """
         Returns the required node. If it doesn't exists it's created.
         """
-        if type(key) == StringType:
+        if isinstance(key, str):
             if key == '*':
                 key = []
             else:
@@ -195,18 +202,16 @@ class LanguageNode(Node):
             return self.children[x][y]
 
 
-
 class AcceptCharset(Root, CharsetNode):
     """
     Implements the Accept-Charset tree.
     """
 
-    def parse(self, accept):
-        accept = Root.parse(self, accept)
-        if not accept.has_key('*') and not accept.has_key('ISO-8859-1'):
-            accept['ISO-8859-1'] = 1.0
-
-        return accept
+    def _parse(self, accept):
+        Root._parse(self, accept)
+        if '*' not in self._ordered_keys and DEFAULT_CHARSET not in self._ordered_keys:
+            self._ordered_keys.append(DEFAULT_CHARSET)
+            self[DEFAULT_CHARSET] = 1.0
 
     def _getnode(self, key):
         """
@@ -214,7 +219,7 @@ class AcceptCharset(Root, CharsetNode):
         """
         if key == '*':
             return self
-        return self.children.setdefault(key, CharsetNode())            
+        return self.children.setdefault(key, CharsetNode())
 
 
 class AcceptLanguage(Root, LanguageNode):
@@ -228,31 +233,15 @@ class AcceptLanguage(Root, LanguageNode):
         prefered language for the given list of available languages,
         if the intersection is void returns None.
         """
-
         language, quality = None, 0.0
 
+        ordered_languages = set(self.getOrderedKeys()).intersection(languages)
         for lang in languages:
+            ordered_languages.add(lang)
+        for lang in ordered_languages:
             q = self.get_quality(lang)
             if q > quality:
                 language, quality = lang, q
 
         return language
 
-
-
-
-
-
-##class AcceptLanguageNode(AcceptNode):
-##    """
-##    This class is a recursive representation of a tree.
-
-##    To implement the tree behaviour the 'children' attribute is used,
-##    it's a mapping object, the value is another AcceptLanguageNode.
-
-##    This class also stores the quality of the node, if its value is None,
-##    it means that the quality is the maximum of the qualities of their
-##    children.
-
-##    This class provides a subset of a mapping interface.
-##    """
