@@ -6,8 +6,7 @@ New features
 -
 Bug fixes
 ~~~~~~~~~
-- #1878: "Accept-Language headers are not honored as they should if no quality
-  is specified".
+-
 New internal features
 ~~~~~~~~~~~~~~~~~~~~~
 - 

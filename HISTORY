@@ -1,4 +1,25 @@
 ===========================================================
+Package: Localizer 1.2.6
+===========================================================
+First release built by: madarche at: 2008-01-15T12:22:28
+SVN Tag: https://svn.nuxeo.org/pub/Zope2/Localizer/tags/1.2.6
+Build from: https://svn.nuxeo.org/pub/Zope2/Localizer/trunk@52414
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- #1878: "Accept-Language headers are not honored as they should if no quality
+  is specified".
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: Localizer 1.2.5
 ===========================================================
 First release built by: madarche at: 2007-10-19T12:23:47
