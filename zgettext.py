@@ -169,13 +169,13 @@ def parse_po_file(content):
         # XXX A warning should be issued
         encoding = 'utf8' 
 
-    # Change (only) the translations to unicode strings
-    for k, v in trans.items():
-        trans[k] = (v[0], [ unicode(x, encoding) for x in v[1] ])
-
     # the last also goes in
     if tuple(MSGID):
         trans[tuple(MSGID)] = (COM, MSGSTR)
+
+    # Change (only) the translations to unicode strings
+    for k, v in trans.items():
+        trans[k] = (v[0], [ unicode(x, encoding) for x in v[1] ])
 
     return encoding, trans
 
