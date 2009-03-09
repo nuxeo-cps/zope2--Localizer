@@ -1,4 +1,24 @@
 ===========================================================
+Package: Localizer 1.2.7
+===========================================================
+First release built by: madarche at: 2009-03-09T10:39:33
+SVN Tag: https://svn.nuxeo.org/pub/Zope2/Localizer/tags/1.2.7
+Build from: https://svn.nuxeo.org/pub/Zope2/Localizer/trunk@53469
+
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- #1953: Last message of po file isn't converted to unicode
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: Localizer 1.2.6
 ===========================================================
 First release built by: madarche at: 2008-01-15T12:22:28
