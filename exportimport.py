@@ -72,18 +72,15 @@ class LocalizerToolXMLAdapter(XMLAdapterBase, ObjectManagerHelpers):
         languages = site.getProperty('available_languages', ())
         if not languages:
             languages = ('en',)
-        # Not really used
-        if 'en' in languages:
-            default_language = 'en'
-        else:
-            default_language = languages[0]
+        default_language = languages[0]
         localizer._languages = tuple(languages)
         localizer._default_language = default_language
 
         self._initObjects(node)
 
-        self._logger.info("Localizer tool imported (%s).",
-                          ', '.join(languages))
+        self._logger.info("Localizer tool imported the languages \"%s\" "
+                          "and the portal default language is now \"%s\"." %
+                          (', '.join(languages), default_language))
 
 
 class MessageCatalogXMLAdapter(XMLAdapterBase, PropertyManagerHelpers):

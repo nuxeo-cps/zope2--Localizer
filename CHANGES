@@ -6,7 +6,7 @@ New features
 -
 Bug fixes
 ~~~~~~~~~
--
+- #2112: GenericSetup import of default portal language is not effective
 New internal features
 ~~~~~~~~~~~~~~~~~~~~~
 - 
