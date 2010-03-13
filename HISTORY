@@ -1,4 +1,21 @@
 ===========================================================
+Package: Localizer 1.2.8
+===========================================================
+First release built by: gracinet at: 2010-03-13T14:55:47
+Requires
+~~~~~~~~
+-
+New features
+~~~~~~~~~~~~
+-
+Bug fixes
+~~~~~~~~~
+- #2112: GenericSetup import of default portal language is not effective
+New internal features
+~~~~~~~~~~~~~~~~~~~~~
+- 
+
+===========================================================
 Package: Localizer 1.2.7
 ===========================================================
 First release built by: madarche at: 2009-03-09T10:39:33
